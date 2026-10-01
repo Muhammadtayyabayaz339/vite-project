@@ -42,13 +42,13 @@ function App(){
         try{
             let url="";
             if(cat ==="general"){
-                url=`/api/top-headlines?country=us&sortBy=publishedAt&language=en&pageSize=6&apiKey=${NEWS_KEY}`;
+                url=`/api/top-headlines?country=us&sortBy=publishedAt&language=en&pageSize=16&apiKey=${NEWS_KEY}`;
                     // url=`/api/everything?q=uk+news&sortBy=publishedAt&language=en&pageSize=6&apiKey=${NEWS_KEY}`;
             }else if(["health","science","technology","business","sports"].includes(cat)){
-                url=`/api/top-headlines?category=${cat}&country=us&pageSize=6&apiKey=${NEWS_KEY}`;
+                url=`/api/top-headlines?category=${cat}&country=us&pageSize=16&apiKey=${NEWS_KEY}`;
                     // url=`/api/everything?q=${cat}+uk&sortBy=publishedAt&language=en&pageSize=6&apiKey=${NEWS_KEY}`;
             }else{
-                url=`/api/everything?q=${cat}&sortBy=publishedAt&language=en&pageSize=6&apiKey=${NEWS_KEY}`;
+                url=`/api/everything?q=${cat}&sortBy=publishedAt&language=en&pageSize=16&apiKey=${NEWS_KEY}`;
             }
     const res=await axios.get(url);
     console.log("API Data",res.data.articles);

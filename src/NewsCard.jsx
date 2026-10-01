@@ -27,7 +27,7 @@ import React from "react";
             {loading ? <p style={{color:'white'}}>Loading News...</p>:
 
             <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(300px,1fr))',gap:'20px',width:'100%'}}>
-            {news && news.slice(0,6).map((article,i)=>(   
+            {news && news.slice(0,12).map((article,i)=>(   
                 <a key={i} href={article.url} target="_blank"
                 style={{border:'1.5px solid green', margin: '0', padding: '15px',width:'100%',boxSizing:'border-box', 
                 color:'green', borderRadius:'10px', background:'#1a1a1a'}}>
@@ -35,7 +35,7 @@ import React from "react";
             objectFit:'cover',borderRadius:'10px'}}/>}
                 <h3 style={{margin:'10px 0'}}>{article.title}</h3>
                 <p style={{fontSize:'15px', color:'white'}}>{article.description}</p>
-                <small style={{color:'#888'}}>Date:{article.publishedAt.slice(0,10)}</small>
+                <small style={{color:'#888'}}>Date:{article.publishedAt.slice(0,12)}</small>
                 </a>        
         ))}
             </div>
