@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# My assignments - keep local only
+src/Finalproject.jsx
+src/Portfolio.jsx
+src/Tayyab.jsx
+src/TwoAPIs.jsx
+src/Weather.jsx
+src/App.css
+public/profile.jpg
+.env
